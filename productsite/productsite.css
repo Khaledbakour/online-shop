@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: 0;
+  border: none;
+  outline: none;
 }
 
 section {
@@ -9,30 +11,246 @@ section {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 section .imgBlock {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: auto;
+  width: 60%;
+  min-width: 300px;
+  max-width: 700px;
+  flex-wrap: wrap;
 }
 section .imgBlock img {
   width: 100%;
+  max-width: 70%;
+  margin: auto;
 }
 section .imgBlock .imgs {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 section .imgBlock .imgs img {
   width: 25%;
   box-shadow: 0 0 2px black;
-  margin: 0 10px;
   cursor: pointer;
 }
 section .productsDetails {
-  text-align: center;
+  text-align: left;
+  width: 40%;
+  margin-top: 50px;
 }
 section .productsDetails .productName {
-  padding: 30px;
-  font-size: 2.5rem;
+  position: relative;
+  overflow: hidden;
   text-transform: capitalize;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+section .productsDetails .productName::after {
+  content: "";
+  background-color: #d79b02;
+  width: 40%;
+  height: 4px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-50%);
+}
+section .productsDetails .rating {
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+section .productsDetails .rating::after {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+section .productsDetails .rating i {
+  font-size: 1.9rem;
+}
+section .productsDetails .priceBlock {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  position: relative;
+}
+section .productsDetails .priceBlock .newPrice {
+  font-size: 2rem;
+}
+section .productsDetails .priceBlock .oldPrice {
+  color: gray;
+  text-decoration: line-through;
+  margin-left: 10px;
+  position: absolute;
+  left: 28%;
+  bottom: 0;
+  padding: 0 10px;
+}
+section .productsDetails .priceBlock .priceTax {
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  color: rgb(84, 84, 84);
+  font-size: 1.1rem;
+}
+section .productsDetails .Shipping {
+  color: gray;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+section .productsDetails .actionBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+section .productsDetails .actionBlock button {
+  padding: 20px;
+  width: 45%;
+  text-transform: uppercase;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+section .productsDetails .actionBlock .addToCart {
+  background-color: orange;
+}
+section .productsDetails .actionBlock .bayNow {
+  background-color: red;
+  color: white;
+}
+section .productsDetails .amountBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+section .productsDetails .amountBlock::after {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+section .productsDetails .amountBlock label {
+  font-size: 1.3rem;
+}
+section .productsDetails .amountBlock input {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+section .productsDetails .description h5 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+section .productsDetails .description h5::after {
+  content: "";
+  background-color: #d79b02;
+  width: 10%;
+  height: 4px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .productsDetails .description p {
+  text-align: justify;
+}
+
+.productClosures {
+  position: relative;
+  overflow: hidden;
+  margin-top: 130px;
+}
+.productClosures:hover .arrow {
+  transition: all 1s;
+  display: block;
+}
+.productClosures .title::after {
+  background-color: #d79b02;
+}
+.productClosures .productsBlock {
+  overflow: hidden;
+  cursor: pointer;
+}
+.productClosures .arrow {
+  position: absolute;
+  font-size: 4rem;
+  transition: all 1s;
+  height: 100%;
+  top: 50%;
+  color: rgba(0, 0, 0, 0.564);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: none;
+  z-index: 2;
+}
+.productClosures .left {
+  left: 0%;
+}
+.productClosures .left:hover {
+  transform: translate(-10px);
+}
+.productClosures .right {
+  right: 0%;
+}
+.productClosures .right:hover {
+  transform: translate(10px);
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: 95% !important;
+  }
+  .productsDetails {
+    width: 100% !important;
+  }
+  .oldPrice {
+    left: 35% !important;
+  }
+  .productClosures {
+    width: 100% !important;
+    margin-top: 70px;
+  }
+  .productClosures .productsBlock {
+    justify-content: center;
+  }
+  .productClosures .productsBlock:first-child {
+    display: block;
+  }
+  .productClosures .productsBlock .arrow {
+    display: block !important;
+  }
+  .productClosures .productsBlock .product {
+    display: none;
+  }
+  .productClosures .productsBlock .product:first-of-type {
+    display: block;
+  }
 }/*# sourceMappingURL=productsite.css.map */

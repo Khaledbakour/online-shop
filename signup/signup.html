@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../form.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <main class="fromSection">
+        
+        <!-- form -->
+        <form ><!-- action="signup.php" method="post" -->
+            <h1>singup</h1>
+            <!-- the  container input First name -->
+            <div class="inputBlock">
+                <label for="firstName">first name:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="nico" >
+            </div>
+            <!-- the  container input First name -->
+            <div class="inputBlock">
+                <label for="lastName">lastName:</label>
+                <input type="text" name="lastName" id="Name" placeholder="jensen" >
+            </div>
+            <!-- the  container input email -->
+            <div class="inputBlock">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="nicojensen.@gmai.com">
+            </div>
+            <!-- the  container input password -->
+            <div class="inputBlock">
+                <label for="password">password:</label>
+                <input type="password" name="password" id="password" required placeholder=".......">
+            </div>
+            <!-- the  container input password -->
+            <div class="inputBlock">
+                <label for="passwordAgain">password again:</label>
+                <input type="password" name="passwordAgain" id="passwordAgain" required placeholder=".....">
+            </div>
+            <!-- the  container input password -->
+            <div class="inputBlock">
+                <label for="phoneNumber">phone Number:</label>
+                <input type="number" name="phoneNumber" id="phoneNumber" placeholder="123-12321456" >
+            </div>
+            <!-- the log in button-->
+            <button type="submit" name="login">login</button>
+            <a class="link" href="../login/login.html"> log in</a>
+        </form>
+    </main>
+    
+</body>
+</html>
