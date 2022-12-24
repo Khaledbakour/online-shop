@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+section .imgBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section .imgBlock img {
+  width: 100%;
+}
+section .imgBlock .imgs {
+  display: flex;
+  justify-content: right;
+}
+section .imgBlock .imgs img {
+  width: 25%;
+  box-shadow: 0 0 2px black;
+  margin: 0 10px;
+  cursor: pointer;
+}
+section .productsDetails {
+  text-align: center;
+}
+section .productsDetails .productName {
+  padding: 30px;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}/*# sourceMappingURL=productsite.css.map */

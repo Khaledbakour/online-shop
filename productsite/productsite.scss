@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+section{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    // the img block
+    .imgBlock{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        img{
+            width:100%; 
+        }
+        .imgs{
+            display: flex;
+            justify-content: right;
+            img{
+                width:25%; 
+                box-shadow: 0 0 2px black;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+        } 
+    }
+    // product details
+    .productsDetails{
+        text-align: center;
+        .productName{
+            padding :30px;
+            font-size: 2.5rem;
+            text-transform: capitalize;
+        }
+    }
+}

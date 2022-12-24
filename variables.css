@@ -1,0 +1,7 @@
+:root{
+    /* colors */
+    --primaryColor: #000000;
+    --secondaryColor:#eff1f2;
+    /* fonts */
+     --PrimaryFont :normal normal normal 88px/1.2em'playfair display',serif;
+}
