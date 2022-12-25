@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+@import '../error';
 *{
     margin: 0;
     padding:0;
@@ -50,6 +51,7 @@
         background-color: black;
         border-radius: 12px;
         margin: auto;
+        position: relative;
         .inputBlock{
             display: flex;
             justify-content: space-between;
@@ -63,19 +65,35 @@
             }          
             input{
                 width: 55%;
-                background-color: rgb(42, 42, 42);
+                background-color: rgba(26, 26, 26, 0.531);
                 padding: 10px;
                 border-radius: 12px;
                 transition: all 500ms;
                 outline: none;
-                color:white;
+                color:#d79b02;
+                padding-left:15px ;
                 &:focus{
                     background-color: transparent;
                     border-bottom:1px solid #d79b02;
                     border-radius: 0;
+                   
+                }
+                &::placeholder{
+                    color:rgba(113, 87, 0, 0.719)
+                }
+            }
+            .eyeIcon{
+                color: rgba(113, 87, 0, 0.719);
+                position: absolute;
+                right: 7%;
+                font-size: 1.3rem;
+                transition: all .5s;
+                cursor: pointer;
+                &:hover,&:active{
                     color:#d79b02
                 }
             }
+
         }
         button{
             width: 100%;
@@ -97,9 +115,13 @@
         .link{
             text-decoration: none;
             text-transform: uppercase;
-            padding-bottom: 10px;
+            padding: 10px;
             color:#d79b02;
-
+            width: max-content;
+            transition: all .5s;
+            &:hover,&:active{
+                box-shadow:0 0 5px white ;
+            }
 
         }
     }

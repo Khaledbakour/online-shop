@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
+.inputIsEmpty {
+  border-color: red !important;
+  box-shadow: 0 0 5px red !important;
+}
+
+.errorMessage {
+  text-align: center;
+  color: red;
+  background-color: rgba(95, 0, 0, 0.41);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +68,7 @@
   background-color: black;
   border-radius: 12px;
   margin: auto;
+  position: relative;
 }
 .fromSection form .inputBlock {
   display: flex;
@@ -69,17 +86,37 @@
 }
 .fromSection form .inputBlock input {
   width: 55%;
-  background-color: rgb(42, 42, 42);
+  background-color: rgba(26, 26, 26, 0.531);
   padding: 10px;
   border-radius: 12px;
   transition: all 500ms;
   outline: none;
-  color: white;
+  color: #d79b02;
+  padding-left: 15px;
 }
 .fromSection form .inputBlock input:focus {
   background-color: transparent;
   border-bottom: 1px solid #d79b02;
   border-radius: 0;
+}
+.fromSection form .inputBlock input::-moz-placeholder {
+  color: rgba(113, 87, 0, 0.719);
+}
+.fromSection form .inputBlock input:-ms-input-placeholder {
+  color: rgba(113, 87, 0, 0.719);
+}
+.fromSection form .inputBlock input::placeholder {
+  color: rgba(113, 87, 0, 0.719);
+}
+.fromSection form .inputBlock .eyeIcon {
+  color: rgba(113, 87, 0, 0.719);
+  position: absolute;
+  right: 7%;
+  font-size: 1.3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.fromSection form .inputBlock .eyeIcon:hover, .fromSection form .inputBlock .eyeIcon:active {
   color: #d79b02;
 }
 .fromSection form button {
@@ -101,6 +138,13 @@
 .fromSection form .link {
   text-decoration: none;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  padding: 10px;
   color: #d79b02;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transition: all 0.5s;
+}
+.fromSection form .link:hover, .fromSection form .link:active {
+  box-shadow: 0 0 5px white;
 }/*# sourceMappingURL=form.css.map */
