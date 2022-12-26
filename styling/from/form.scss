@@ -6,6 +6,9 @@
     box-sizing: border-box;
     border:none;
 }
+body{
+    color:white;
+}
 .fromSection{
     display:flex ;
     justify-content: center;
@@ -47,7 +50,7 @@
         padding: 15px;
         display: flex;
         flex-direction: column;
-        min-width: 350px;
+        width: 350px;
         background-color: black;
         border-radius: 12px;
         margin: auto;
@@ -109,20 +112,23 @@
                 background-color: #d79b02;
                 color:white;
                 letter-spacing: 6px;
-                
             }
         }
-        .link{
-            text-decoration: none;
-            text-transform: uppercase;
-            padding: 10px;
-            color:#d79b02;
-            width: max-content;
-            transition: all .5s;
-            &:hover,&:active{
-                box-shadow:0 0 5px white ;
-            }
-
-        }
+        // .formFooter{
+        //     display: flex;
+        //     justify-content: space-around;
+        //     text-decoration: underline; 
+        //     color:#d79b02;
+        //     padding: 10px;
+        //     .link{
+        //         text-transform: uppercase;
+        //         width: max-content;
+        //         transition: all .5s;
+        //         &:hover,&:active{
+        //             box-shadow:0 0 5px white ;
+        //         }
+        //     }
+        // }
+        
     }
 }

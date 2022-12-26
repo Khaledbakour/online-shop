@@ -1,3 +1,13 @@
+
+<?php
+$errorMessage="";
+session_start();
+if($_SESSION){
+    if($_SESSION['error']==1){ 
+        $errorMessage= "<p class='errorMessage'>brugernavnet eller e-mailen er forkert</p>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +16,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../../styling/from/form.css">
+    <link rel="stylesheet" href="../styling/from/form.css">
     <!-- js link -->
-    <script defer src="../../js/form.js"></script>
-    <script defer src="../../js/signup.js"></script>
+    <script defer src="../js/form.js"></script>
     <!-- google icons & fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <main class="fromSection">
         <!-- form -->
-        <form method="get" ><!-- action="signup.php" method="post" -->
+        <form  action="./signupcon.php" method="post"  >
             <h1>register</h1>
             <!-- the  container input First name -->
+            <?= $errorMessage?>
             <div class="inputBlock">
                 <label for="firstName">fornavn :</label>
                 <input type="text" name="firstName" id="firstName" placeholder="nico" >
@@ -31,28 +41,32 @@
             <!-- the  container input email -->
             <div class="inputBlock">
                 <label for="email">eamil :</label>
-                <input type="email" name="email" id="email" placeholder="nicojensen.@gmai.com">
+                <input type="text" name="email" id="email" class="email" placeholder="nicojensen.@gmai.com">
             </div>
             <!-- the  container input password -->
             <div class="inputBlock">
                 <label for="password">password :</label>
-                <input type="password" name="password" id="password" placeholder="***">
+                <input type="password" name="password" id="password" class="password" placeholder="***">
                 <span class="material-icons eyeIcon">visibility_off</span>
             </div>
             <!-- the  container input password -->
             <div class="inputBlock">
                 <label for="passwordAgain">password again :</label>
-                <input type="password" name="passwordAgain" id="passwordAgain" placeholder="***">
+                <input type="password" name="passwordAgain" id="passwordAgain" class="password" placeholder="***">
                 <span class="material-icons eyeIcon">visibility_off</span>
             </div>
             <!-- the  container input password -->
             <div class="inputBlock">
                 <label for="phoneNumber">Telefonnummer :</label>
-                <input type="number" name="phoneNumber" id="phoneNumber" placeholder="123-12321456" >
+                <input type="number" name="phoneNumber" id="phoneNumber"  placeholder="123-12321456" >
             </div>
             <!-- the log in button-->
-            <button  name="login">register</button>
-            <a class="link" href="./login.html"> logge ind</a>
+            <button  name="signup">register</button>
+            
+            <div class="formFooter">
+                <a class="link" href="./login.php"> logge ind</a>
+                <a class="link" href="./password.php">adgangskode glemt</a>
+            </div>
         </form>
     </main>
    

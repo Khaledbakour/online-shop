@@ -22,6 +22,10 @@
   border: none;
 }
 
+body {
+  color: white;
+}
+
 .fromSection {
   display: flex;
   justify-content: center;
@@ -64,7 +68,7 @@
   padding: 15px;
   display: flex;
   flex-direction: column;
-  min-width: 350px;
+  width: 350px;
   background-color: black;
   border-radius: 12px;
   margin: auto;
@@ -134,17 +138,4 @@
   background-color: #d79b02;
   color: white;
   letter-spacing: 6px;
-}
-.fromSection form .link {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px;
-  color: #d79b02;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  transition: all 0.5s;
-}
-.fromSection form .link:hover, .fromSection form .link:active {
-  box-shadow: 0 0 5px white;
 }/*# sourceMappingURL=form.css.map */

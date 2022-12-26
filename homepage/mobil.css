@@ -1,0 +1,25 @@
+@media only screen and (max-width: 700px) {
+  ul {
+    display: none !important;
+  }
+  .burger {
+    display: block !important;
+  }
+  .contact {
+    width: 100% !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: #d79b02;
+  }
+  .info2 {
+    background-color: rgb(27, 27, 27) !important;
+  }
+}/*# sourceMappingURL=mobil.css.map */
