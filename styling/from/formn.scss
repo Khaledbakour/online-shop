@@ -5,6 +5,9 @@
     padding:0;
     box-sizing: border-box;
     border:none;
+    text-decoration: none;
+    color:white;
+
 }
 body{
     color:white;
@@ -114,21 +117,23 @@ body{
                 letter-spacing: 6px;
             }
         }
-        // .formFooter{
-        //     display: flex;
-        //     justify-content: space-around;
-        //     text-decoration: underline; 
-        //     color:#d79b02;
-        //     padding: 10px;
-        //     .link{
-        //         text-transform: uppercase;
-        //         width: max-content;
-        //         transition: all .5s;
-        //         &:hover,&:active{
-        //             box-shadow:0 0 5px white ;
-        //         }
-        //     }
-        // }
+        .formFooter{
+            display: flex;
+            justify-content: space-around;
+            text-decoration: underline; 
+            color:#d79b02;
+            padding: 10px;
+            .link{
+                padding: 4px;
+                text-transform: uppercase;
+                width: max-content;
+                transition: all .5s;
+                color:#d79b02;
+                &:hover,&:active{
+                    box-shadow:0 0 5px white ;
+                }
+            }
+        }
         
     }
 }

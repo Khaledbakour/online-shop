@@ -31,8 +31,12 @@ inputBlocks.forEach(e=> {
 });
 // check data before send there 
 document.forms[0].addEventListener('submit',e=>{
-    let inputsCheck= inputs.every(e=> e.value);// check if all data not empty
-    let passwordCheck= passwords.reduce((p,c)=> p.value ==c.value)// check if password is same
+    e.preventDefault()
+    let inputsCheck= inputs.every(e=> e.value);// check if all data not empty#
+    console.log(passwords)
+    if(passwords!==""){
+        let passwordCheck= passwords.reduce((p,c)=> p.value ==c.value)// check if password is same
+    }
     let emailValidated;
     // check if the email is validated
     inputs.map(e=> e.className=='email'?emailValidated=e.value.match(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g): "")
@@ -59,3 +63,4 @@ document.forms[0].addEventListener('submit',e=>{
     }
 })
 
+console.log("hallo")

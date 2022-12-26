@@ -62,10 +62,8 @@ if($_SESSION){
             </div>
             <!-- the log in button-->
             <button  name="signup">register</button>
-            
             <div class="formFooter">
                 <a class="link" href="./login.php"> logge ind</a>
-                <a class="link" href="./password.php">adgangskode glemt</a>
             </div>
         </form>
     </main>

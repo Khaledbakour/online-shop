@@ -16,7 +16,7 @@ if($_SESSION){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../styling/from/form.css">
+    <link rel="stylesheet" href="../styling/from/formn.css"> 
     <!-- js link -->
     <script defer src="../js/form.js"></script>
     <!-- google icon & fonts -->
@@ -44,7 +44,7 @@ if($_SESSION){
 
             <div class="formFooter">
                 <a class="link" href="./signup.php"> Sign Up</a>
-                <a class="link" href="./password.php">adgangskode glemt</a>
+                <a class="link" href="./forgetPassword.php">adgangskode glemt</a>
             </div>
          
         </form>

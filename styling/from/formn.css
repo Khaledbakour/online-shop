@@ -20,6 +20,8 @@
   padding: 0;
   box-sizing: border-box;
   border: none;
+  text-decoration: none;
+  color: white;
 }
 
 body {
@@ -138,4 +140,23 @@ body {
   background-color: #d79b02;
   color: white;
   letter-spacing: 6px;
-}/*# sourceMappingURL=form.css.map */
+}
+.fromSection form .formFooter {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: underline;
+  color: #d79b02;
+  padding: 10px;
+}
+.fromSection form .formFooter .link {
+  padding: 4px;
+  text-transform: uppercase;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transition: all 0.5s;
+  color: #d79b02;
+}
+.fromSection form .formFooter .link:hover, .fromSection form .formFooter .link:active {
+  box-shadow: 0 0 5px white;
+}/*# sourceMappingURL=formn.css.map */
