@@ -66,6 +66,29 @@ body {
   bottom: 0;
   background-color: #d79b02;
 }
+.fromSection .infoText {
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  position: relative;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 20px;
+}
+.fromSection .infoText::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  background-color: #d79b02;
+}
+.fromSection .infoText span {
+  font-weight: bolder;
+  color: #d79b02;
+}
 .fromSection form {
   padding: 15px;
   display: flex;

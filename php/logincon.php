@@ -9,11 +9,19 @@ $errorMessage="";
         $checkDataInDB->execute();
         $userCount= $checkDataInDB-> rowCount();
         if($userCount!= 0){
-            header("location:../homepage/homepage.html");
-            $_SESSION['error']=false;
+            header("location:../homepage/homepage.php");
+            $allData= $checkDataInDB->fetchAll();
+             $user=$allData[0]['firstName'];
+            $_SESSION['user']=$user;
+
+            $_SESSION['log-error']=false;
+            
         }else{
             header("location:./login.php");
+            $_SESSION['log-error']=true;
         }
-    } 
-    $_SESSION['error']=true;
+    } else{
+        header("location:./login.php");
+
+    }
 ?>

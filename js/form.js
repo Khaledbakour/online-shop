@@ -29,38 +29,53 @@ inputBlocks.forEach(e=> {
         })
     }
 });
+console.log(passwords.length)
+
 // check data before send there 
 document.forms[0].addEventListener('submit',e=>{
-    e.preventDefault()
+
     let inputsCheck= inputs.every(e=> e.value);// check if all data not empty#
-    console.log(passwords)
-    if(passwords!==""){
-        let passwordCheck= passwords.reduce((p,c)=> p.value ==c.value)// check if password is same
+    errorMessage= document.createElement('p')
+    errorMessage.classList="errorMessage"
+    
+    let passwordCheck=true;
+    if(passwords.length>1){
+        passwordCheck= passwords.reduce((p,c)=> p.value ==c.value)// check if password is same
     }
-    let emailValidated;
+    let emailValidated=true;
     // check if the email is validated
     inputs.map(e=> e.className=='email'?emailValidated=e.value.match(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g): "")
     // check if them message  element is already append
-    if(!inputsCheck ){
-        inputs.map(e=>{ !e.value? e.classList.add("inputIsEmpty"):""})
-        errorMessage= document.createElement('p')
-        errorMessage.classList="errorMessage"
+    if(!passwordCheck){
+        // check if the password is same
         errorMessage.textContent='venligst udfylde alle fjer'
+        passwords.map(ele=> ele.classList.add('inputIsEmpty'))
+        console.log("password")
+
         e.preventDefault()
-    }else if(!emailValidated ){
+    } 
+    if(!emailValidated ){
+        passwords.map(ele=> ele.classList.remove('inputIsEmpty'))
         // show the user in wich input is the error
         inputs.map(e=>{e.className == "email"?  e.classList.add("inputIsEmpty"):"" })
         errorMessage.textContent='mailen er ikke valideret'
+        console.log('email')        
         e.preventDefault()
-    }else if(!passwordCheck){
-        // check if the password is same
-        p.textContent='venligst udfylde alle fjer'
-        passwords.map(ele=> ele.classList.add('inputIsEmpty'))
+    }
+   
+    if(!inputsCheck){
+        
+        inputs.map(e=>{;!e.value? e.classList.add("inputIsEmpty"):""})
+        errorMessage.textContent='venligst udfylde alle fjer'
+        console.log('empty')
         e.preventDefault()
     } 
-    if(submitBtn.nextElementSibling.className!=="errorMessage"){
+  
+    checkNextElement = submitBtn.nextElementSibling||""
+
+    if(checkNextElement.className!=="errorMessage"&&errorMessage.textContent!==""){
+        console.log(errorMessage.textContent=="")
         submitBtn.after(errorMessage)
     }
 })
-
-console.log("hallo")
+console.log('hallo');

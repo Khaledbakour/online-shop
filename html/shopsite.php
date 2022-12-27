@@ -1,3 +1,13 @@
+<?php
+require "./header.php";
+require "../html/footer.php";
+session_start();
+$checkUser=false;
+if(isset($_SESSION['user'])){
+  $checkUser=true;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styling/shopsite styling/shop.css">
 <body>
+<?php head($checkUser)?>
 <!-------- Products --->
 <section>
     <h2 class="title"> alle produkter</h2>
@@ -138,16 +149,7 @@
         </div>
     </div>
 </section>
-
-    
-
-    
-    
-    
-   
-
-
-
+<?php footer()?>
 
 </body>
 </html>

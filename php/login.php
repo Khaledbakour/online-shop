@@ -2,11 +2,16 @@
 <?php 
 session_start();
 $errorMessage="";
-if($_SESSION){
-    if($_SESSION['error']==1){ 
-        $errorMessage= "<p class='errorMessage'>brugernavnet eller e-mailen er forkert</p>";
+if(isset($_SESSION['sin-error'])){
+    $_SESSION['sin-error']=false;
+}
+if( isset($_SESSION['log-error'])){ 
+    if($_SESSION['log-error']==1){
+        $errorMessage= "<p class='errorMessage'>Adgangskode eller adgangskode er forkert</p>";
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,16 +21,17 @@ if($_SESSION){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../styling/from/formn.css"> 
+    <link rel="stylesheet" href="../styling/from/formn.css">
+
     <!-- js link -->
-    <script defer src="../js/form.js"></script>
+    <script  defer src="../js/form.js"></script>
     <!-- google icon & fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <main class="fromSection">
  <!-- form -->
-        <form action="./loginconc.php" method="POST"><!-- action="login.php" method="post" -->
+        <form action=" ./logincon.php" method="POST"><!-- action="login.php" method="post" -->
             <h1>logge ind</h1>
             <?= $errorMessage?>
             <!-- the  container input email -->

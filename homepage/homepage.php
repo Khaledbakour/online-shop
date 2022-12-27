@@ -1,3 +1,12 @@
+<?php
+require "../html/header.php";
+require "../html/footer.php";
+session_start();
+$checkUser=false;
+if(isset($_SESSION['user'])){
+  $checkUser=true;
+}
+?>
 <!DOCTYPE html>
 <html lang="dk">
   <head>
@@ -8,10 +17,7 @@
     <link rel="stylesheet" href="mobil.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,37 +28,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <title>Document</title>
+    <title>homepage</title>
   </head>
   <body>
-    <header>
-      <h1>Mokassarat</h1>
-      <div class="burger"><span class="material-icons"> menu </span></div>
-      
-        <ul>
-          <li><a href="###">hjemmeside</a></li>
-          <li><a href="###">Shop</a></li>
-          <li><a href="###">om os</a></li>
-          <li><a href="###">kontakt</a></li>
-          <li><a href="###">
-            <span class="material-icons"> account_circle </span>Login</a>
-          </li>
-          <li>
-            <a href="###"><span class="material-icons"> shopping_bag </span></a>
-          </li>
-        </ul>
-      
-     
-    </header>
+  <?php head($checkUser)?>
     <div class="firstcontent">
       <img src="../store-master/mixed-1938302_1920.jpg" />
       <div class="content-child">
         <h1>Lorem ipsum <br />dolor sit amet</h1>
       </div>
     </div>
-    <div class="secondcontent">
+    <div id="aboutUs" class="secondcontent">
       <h2>About Us</h2>
-      <br />
+      <br/>
       <p>
         Mokassarat is a well-renowned online store that has continually featured
         a variety of high-quality and affordable products since day one.
@@ -64,8 +52,7 @@
         experience as rewarding and fun as possible. Check out our store and
         special offers, and get in touch with questions or requests.
       </p>
-    </div>
-     
+    </div>  
     <div class="slider">
       <div class="slide-track">
         <div class="slide">
@@ -95,8 +82,7 @@
         </div>
       </div>
     </div>
-   
-    <div class="contact-container">
+    <div id="contact" class="contact-container">
       <div class="contact">
         <h1>CONTACT</h1>
         <p>Hier schreib einfach die Firmen Adresse</p>
@@ -157,31 +143,7 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-   
-   
-    <footer>
-      <form action="" class="sub-form">
-        <label for="sub1">Subscribe Form</label>
-        <div class="ej-container">
-          <input type="email"id="sub1"name="sub1" placeholder="e.g., email@example.com"/>
-          <button class="join">Join</button>
-        </div>
-      </form>
-      <div class="info">
-        <h3>Mokassarat</h3>
-        <p>info@mysite.com</p>
-        <div class="info2">
-          <a href="###">Unsere AGB</a>
-          <a href="###">Datenschutzerklaerung</a>
-          <a href="###">Impressum</a>
-          <a href="###">Hinweise zu Cookies</a>
-          <a href="###">Hnweise zu Intressenbasierter</a>
-        </div>
-        <p class="copyRight">
-          <span class="material-icons"> copyright </span> 2022 by Mokassarat
-        </p>
-      </div>
-    </footer>
-     
+
+     <?php footer()?>
   </body>
 </html>

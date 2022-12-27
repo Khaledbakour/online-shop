@@ -48,6 +48,30 @@ body{
             bottom:0;
             background-color: #d79b02;
         }
+       
+    }
+    .infoText{
+        margin-bottom: 50px;
+        padding:20px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        position: relative;
+        font-family: 'Ropa Sans', sans-serif;
+        font-size: 20px;
+        &::after{
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 0%;
+            bottom:0;
+            background-color: #d79b02;
+        }
+        span{
+            font-weight: bolder;
+            color:#d79b02
+        }
     }
     form{
         padding: 15px;

@@ -2,8 +2,11 @@
 <?php
 $errorMessage="";
 session_start();
-if($_SESSION){
-    if($_SESSION['error']==1){ 
+if(isset($_SESSION['log-error'])){
+    $_SESSION['log-error']=false;
+}
+if(isset($_SESSION['sin-error'])){ 
+    if($_SESSION['sin-error']==true){
         $errorMessage= "<p class='errorMessage'>brugernavnet eller e-mailen er forkert</p>";
     }
 }
@@ -16,7 +19,7 @@ if($_SESSION){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../styling/from/form.css">
+    <link rel="stylesheet" href="../styling/from/formn.css">
     <!-- js link -->
     <script defer src="../js/form.js"></script>
     <!-- google icons & fonts -->

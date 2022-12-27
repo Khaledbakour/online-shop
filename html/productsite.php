@@ -1,3 +1,12 @@
+<?php
+require "./header.php";
+require "../html/footer.php";
+session_start();
+$checkUser=false;
+if(isset($_SESSION['user'])){
+  $checkUser=true;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +26,7 @@
    
 </head>
 <body>
+    <?php head()?>
     <section>
         <div class="imgBlock">
             <img src="../imges/pro_1.jpg" alt="">
@@ -113,5 +123,7 @@
         <span class="material-icons  right arrow">navigate_next </span>
         </div>
     </section>
+    <?php footer()?>
+
 </body>
 </html>

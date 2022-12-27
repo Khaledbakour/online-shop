@@ -1,0 +1,65 @@
+header {
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.812);
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5% 0 5%;
+  height: 70px;
+  box-shadow: 0 0 4px white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+header h1 {
+  font-family: "Marck Script", cursive;
+}
+header .burger {
+  display: none;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 60%;
+  text-transform: capitalize;
+}
+header ul li {
+  list-style: none;
+  font-size: 1rem;
+  min-width: 80x;
+  width: 100%;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+header ul li a:hover {
+  color: #d79b02;
+}
+header ul li a span {
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: all 0.4s;
+}
+header ul li a span:hover, header ul li a span:active {
+  color: #d79b02;
+}
+
+@media only screen and (max-width: 700px) {
+  ul {
+    display: none !important;
+  }
+  .burger {
+    display: block !important;
+  }
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,74 @@
+footer{
+    text-align: center;
+    color:black !important;
+    background-color: rgb(0, 0, 0);
+   .inputBlock{
+    position: relative;
+    label{
+        position: absolute;
+        top:-100%;
+        left: 40vw;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: 'Ropa Sans', sans-serif;
+    }
+    .subBlock{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height:40px ;
+        margin:  10px 0 60px ;
+        input{
+            outline: none;
+            border:none;
+            background-color: rgba(67, 67, 67, 0.531);
+            color:#d79b02;;
+            border-bottom-left-radius: 12px;
+            border-top-left-radius:12px ;
+            font-size: 20px;
+            padding-left:15px ;
+            transition: all 500ms;
+            &::placeholder{
+                color:rgba(113, 87, 0, 0.719)
+            }
+            &:focus{
+                background-color: transparent;
+                border-bottom:1px solid #d79b02;
+                border-radius: 0;
+               
+            }
+        }
+        button{
+            width: max-content;
+            background-color: white;
+            padding:0 20px;
+            text-transform: uppercase;
+            color:black;
+            border-bottom-right-radius: 12px;
+            border-top-right-radius:12px ;
+            cursor: pointer;
+        }
+    }
+   }
+   
+    .info2{
+       
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top:30px ;
+        line-height: 40px;
+        a{
+            min-width: 120px;
+        }
+    }
+    .copyRight{
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+    }
+}
